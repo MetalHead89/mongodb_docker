@@ -2,11 +2,15 @@
 version: '3.8'
 services:
   mongodb:
-    image: mongo:7.0.5-rc0-jammy
+    image: mongo:7.0.14
+    enviroment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ksjUhsj7Gf
     container_name: mongodb
     ports:
-      - '27017:27017'
+      - 27017:27017
     volumes:
       - mongodb:/app/mongodb
 volumes:
   mongodb:
+    driver: local
