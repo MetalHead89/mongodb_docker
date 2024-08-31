@@ -16,4 +16,8 @@ $ mongosh
 
 Stop container:
 
+$ docker compose stop
+
+Stop and remove container:
+
 $ docker-compose down
